@@ -72,11 +72,10 @@ const createSlider = () => {
   imagesArea.style.display = "none";
   const duration = document.getElementById("duration").value || 1000;
 
-  // const duration = document.getElementById("duration").value;
   if (duration <= 0) {
     let div = document.createElement("div");
     div.className = "negative-time";
-    div.innerHTML = `<h1>Invalid Time</h1>`;
+    div.innerHTML = `<h1>You must enter possitive time to see the slider.</h1>`;
     sliderContainer.appendChild(div);
   } else {
     sliders.forEach((slide) => {
